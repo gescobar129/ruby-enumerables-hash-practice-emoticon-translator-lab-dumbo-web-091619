@@ -89,9 +89,6 @@ describe "#get_japanese_emoticon" do
     answer = get_japanese_emoticon("./lib/emoticons.yml", "=D")
   end
 
-  it "returns the Japanese equivalent of an English grinning" do
-    expect(get_japanese_emoticon("./lib/emoticons.yml", "=D")).to eq("(￣ー￣)")
-  end
 
   it "returns the Japanese equivalent of an English happy" do
     expect(get_japanese_emoticon("./lib/emoticons.yml", ":)")).to eq("(＾ｖ＾)")

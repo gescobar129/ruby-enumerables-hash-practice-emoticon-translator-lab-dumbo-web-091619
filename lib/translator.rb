@@ -1,9 +1,13 @@
 require 'yaml'
+<<<<<<< HEAD
 require 'pry'
+=======
+>>>>>>> 2e0789e8fe6aa05cd0b997fc9a20fe847449acbe
 
 def load_library(file_path)
   file = File.read(file_path)
   emoticons = YAML.load(file)
+<<<<<<< HEAD
   
   new_hash = {"get_emoticon": {}, "get_meaning": {} }
   
@@ -27,6 +31,18 @@ def load_library(file_path)
     new_hash[:get_meaning] = temp_hash1
     new_hash[:get_emoticon] = temp_hash2
     
+=======
+  print emoticons
+  puts "!!!!!!!!!!!!!!!!!!!!!!"
+  new_hash = {"get_emoticon": {}, "get_meaning": {} }
+  temp_hash = {}
+  emoticons.each do |english_meaning, jap_emoticon|
+    temp_hash[jap_emoticon] = english_meaning
+  end
+    new_hash[:get_meaning] = temp_hash
+  print new_hash
+  puts "^^^^^^^^^^^^^^^^^^^^"
+>>>>>>> 2e0789e8fe6aa05cd0b997fc9a20fe847449acbe
   return new_hash
 end
 
